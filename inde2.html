@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Styled Button</title>
+    <style>
+        /* Custom button style */
+        .enroldbutton {
+            display: inline-block;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
+            text-decoration: none;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 1px solid #007bff;
+            color: #007bff;
+            background-color: #fff;
+            border-radius: 0.25rem;
+        }
+
+        /* Button with primary style */
+        .enroldbutton-primary {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        /* Dropdown button style */
+        .enroldbutton-dropdown-toggle {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+            margin-left: -1px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+        }
+
+        /* Dropdown menu style */
+        .enroldbutton-dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            padding: 0.5rem 0;
+        }
+
+        /* Show dropdown menu on button hover */
+        .enroldbutton-group:hover .enroldbutton-dropdown-menu {
+            display: block;
+        }
+
+        /* Dropdown item style */
+        .enroldbutton-dropdown-item {
+            display: block;
+            width: 100%;
+            padding: 0.25rem 1.5rem;
+            clear: both;
+            font-weight: 400;
+            color: #212529;
+            text-align: inherit;
+            white-space: nowrap;
+            background-color: transparent;
+            border: 0;
+            text-decoration: none;
+        }
+
+        /* Divider between menu items */
+        .enroldbutton-dropdown-divider {
+            height: 1px;
+            margin: 0.5rem 0;
+            overflow: hidden;
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+
+<div class="enroldbutton-group">
+    <!-- Button with primary style -->
+    <button type="button" class="enroldbutton enroldbutton-primary">Enrold Button</button>
+
+    <!-- Dropdown button -->
+    <button type="button" class="enroldbutton enroldbutton-dropdown-toggle" data-toggle="enroldbutton-dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+    </button>
+
+    <!-- Dropdown menu -->
+    <div class="enroldbutton-dropdown-menu">
+        <a class="enroldbutton-dropdown-item" href="#">Menu Item 1</a>
+        <a class="enroldbutton-dropdown-item" href="#">Menu Item 2</a>
+        <a class="enroldbutton-dropdown-item" href="#">Menu Item 3</a>
+        <div class="enroldbutton-dropdown-divider"></div>
+        <a class="enroldbutton-dropdown-item" href="#">Separated Link</a>
+    </div>
+</div>
+
+<!-- Bootstrap JS (Optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

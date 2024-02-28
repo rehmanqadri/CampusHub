@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="dashbord.css"> -->
+    <link rel="stylesheet" href="dashbord2.css">
+    <link rel="stylesheet" href="logindashbord.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="body">
+        <div class="header">
+            <div class="logo">
+                <!-- <img src="/imges/LOGOo.svg" alt=""> -->
+                <img src="/imges/LOGOinw.svg" alt="">
+            </div>
+            <!-- <div class="menu">
+                <nav>
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Shope</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact</a>
+                </nav>
+            </div> -->
+            <div class="btnn">
+
+
+                <img class="log" src="imges/person-fill.svg" alt="" onclick="show()" style="
+                width: 60px;
+            ">
+
+                <img src="imges/person-fill-lock.svg" alt="" onclick="window.location.href = '/loginform.html';" style="
+                width: 60px;
+            ">
+
+               
+
+                <!-- <img src="imges/carticon.svg" alt=""> -->
+            </div>
+        </div>
+
+        <div class="boxn2">
+
+            <div class="leftbar">
+                <div class="inerbox">
+                    <div class="columns">
+                        <section class="inersection"><span class="data" onclick="NewRegistration()">New
+                                Registration</span></section>
+                        <section class="inersection"><span class="data" onclick="Registerstudents()">Register
+                                students</span></section>
+                        <section class="inersection"><span class="data" onclick="enrol()">Enrolled</span></section>
+                        <section class="inersection"><span class="data" onclick="Coursetocumplete()">Course
+                                complete</span></section>
+                        <section class="inersection"><span class="data" onclick="DataAtArcive()">Archive </span>
+                        </section>
+                        <section class="inersection"><span class="data" onclick="userdata()">User</span></section>
+                        <section class="lastone" onclick="remov()">
+                            <div class="lastdata">
+
+                                <img src="imges/square-16-fill.svg" alt="">
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="main1">
+                    <div class="main1innerpart">
+                        <!-- <section class="textsec1">WELCOME <span id="userIdDisplay"></span> SIR</section> -->
+                        <section class="textsec1">Welcome, Sir <span id="userIdDisplay"></span></section>
+
+                        <section class="textsec2">Join Our Educational Community and Unlock Your True Potential.
+                        </section>
+                        <section class="btngroup">
+                            <button class="btn" onclick="make()">KNOW MORE</button>
+                            <button class="btn" onclick="NewRegistration()">APPLY NOW</button>
+                        </section>
+                    </div>
+                </div>
+                <div class="main2">
+                    <img src="imges/Group11.svg" alt="" srcset="">
+                </div>
+
+            </div>
+
+            <div class="login">
+                <h2>Registration Form</h2>
+                <div class="grid">
+                    <div class="firstbox">
+                        <label for="name">Enter your name:</label>
+                        <input type="text" id="name" placeholder="Enter Your Name">
+
+                        <label for="date">Enter your Date of Birth:</label>
+                        <input type="date" id="Dob" placeholder="Enter Your Code">
+                        <label for="name">Enter your Mobile Number</label>
+                        <input type="tel" id="Mobile" placeholder="Enter Your Name">
+
+                        <label for="gender">Select your Gender:</label>
+                        <Section class="gender" id="gender">
+
+                            <input type="radio" id="male" class="gender" name="gender" value="male">
+                            <label for="male">Male</label>
+
+                            <input type="radio" id="female" class="gender" name="gender" value="female">
+                            <label for="female">Female</label>
+
+                            <input type="radio" id="other" class="gender" name="gender" value="other">
+                            <label for="other">Other</label>
+                        </Section>
+
+
+                        <label for="email">Enter your Email Address:</label>
+                        <input type="email" id="email" placeholder="Enter Your Name">
+
+
+                    </div>
+                    <div class="secondtbox">
+
+
+
+
+                        <label for="text">Enter your Username (for login)</label>
+                        <input type="text" id="Username" placeholder="Enter Your Code">
+
+                        <label for="text">Enter your Password (for login)</label>
+                        <input type="text" id="Password" placeholder="Enter Your Password">
+
+                        <label for="text">Enter your Nationality</label>
+                        <!-- <input type="text" id="name" placeholder="Enter Your Name"> -->
+
+                        <select name="Nationality" class="Nationality" id="Nationality">
+                            <option value="Indian">Indian</option>
+                            <option value="Other">Other</option>
+                            <!-- Add more options as needed -->
+                        </select>
+
+                        <label for="text">Enter How did you hear about the college?</label>
+                        <input type="text" id="clgname" placeholder="Enter Your Name">
+
+                        <label for="text">Enter your Admission Date</label>
+                        <input type="text" id="admisdata" placeholder="Enter Your Name">
+
+
+                    </div>
+
+                </div>
+                <div><button id="sub" onclick="submit()">Submit</button></div>
+                <button id="Show" onclick="datashow()">Show Data</button>
+                <button id="Update" style="display: block;width: 100%;">Update</button>
+            </div>
+            <div class="secbox">
+
+                <table class="table table-bordered" id="crudTable">
+                    <thead style=" text-align: center; ">
+                        <tr>
+                            <th>Name</th>
+                            <th>Dob</th>
+                            <th>Mobile</th>
+
+                            <th>gender</th>
+                            <th>email</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Nationality</th>
+                            <th>clgname</th>
+                            <th>admisdata</th>
+                            <th>Actions</th>
+                            <th>Check for Enrolled</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </div>
+
+
+            <div class="Enroled">
+
+                <table class="table table-bordered" id="ccrudTable">
+                    <thead style=" text-align: center; ">
+                        <tr>
+                            <th>Name</th>
+                            <th>Dob</th>
+                            <th>Mobile</th>
+
+                            <th>gender</th>
+                            <th>email</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Nationality</th>
+                            <th>clgname</th>
+                            <th>admisdata</th>
+
+                            <th>Course complete</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </div>
+            <div class="Courscumplete">
+
+                <table class="table table-bordered" id="cccrudTable">
+                    <thead style=" text-align: center; ">
+                        <tr>
+                            <th>Name</th>
+                            <th>Dob</th>
+                            <th>Mobile</th>
+
+                            <th>gender</th>
+                            <th>email</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Nationality</th>
+                            <th>clgname</th>
+                            <th>admisdata</th>
+
+                            <!-- <th>Course complete</th> -->
+
+                        </tr>
+
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </div>
+
+            <div class="ArchiveData">
+
+                <table class="table table-bordered" id="ccccrudTable">
+                    <thead style=" text-align: center; ">
+                        <tr>
+                            <th>Name</th>
+                            <th>Dob</th>
+                            <th>Mobile</th>
+
+                            <th>gender</th>
+                            <th>email</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Nationality</th>
+                            <th>clgname</th>
+                            <th>admisdata</th>
+                            <th>Actions</th>
+
+                            <!-- <th>Course complete</th> -->
+
+                        </tr>
+
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </div>
+
+
+
+            <div class="ssecbox">
+
+                <table class="table table-bordered" id="ccccrudTtable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Password</th>
+
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+
+
+        function takingdataRegisterstudent(){
+
+            // Retrieve data from localStorage
+            let exxdata = localStorage.getItem("mydata");
+            let mmmmyarry = exxdata ? JSON.parse(exxdata) : [];
+
+            let usname = document.getElementById("name").value;
+            let Dob = document.getElementById("Dob").value;
+            let Mobile = document.getElementById("Mobile").value;
+            let gender = document.getElementById("gender").value;
+            let email = document.getElementById("email").value;
+            let Username = document.getElementById("Username").value;
+            let Password = document.getElementById("Password").value;
+            let Nationality = document.getElementById("Nationality").value;
+            let clgname = document.getElementById("clgname").value;
+            let admisdata = document.getElementById("admisdata").value;
+
+            var genderGroup = document.getElementsByName("gender");
+            var genderGroupp = document.getElementsByClassName("gender").value;
+
+
+
+
+            // Log the data (you can customize this based on your requirements)
+
+            var html = "";
+            // if ((name !== "" )){ && isChecked==true
+
+            if (mmmmyarry.length !== 0) {
+                mmmmyarry.forEach(function (element, index) {
+
+
+                    html += "<tr>";
+                    html += "<td>" + element.usname + "</td>";
+                    html += "<td>" + element.Dob + "</td>";
+                    html += "<td>" + element.Mobile + "</td>";
+                    html += "<td>" + element.gender + "</td>";
+                    html += "<td>" + element.email + "</td>";
+                    html += "<td>" + element.Username + "</td>";
+                    html += "<td>" + element.Password + "</td>";
+                    html += "<td>" + element.Nationality + "</td>";
+                    html += "<td>" + element.clgname + "</td>";
+                    html += "<td>" + element.admisdata + "</td>";
+
+                    html += '<td style=" display: flex; flex-direction: column; gap: 5px; " ><button onclick="deleteData(' + index + ')" class="btn btn-danger" style = "width: auto;" ><img src="/imges/trash3-fill.svg" alt="" srcset="" style=" vertical-align: baseline; "></button><button onclick="updateDate(' + index + ')" class="btn btn-warning" style = "width: auto;"  ><img src="/imges/pen.svg" alt="" srcset="" style=" vertical-align: baseline; " ></button></td>';
+                    // html += '<td><input type="checkbox" id="myCheckbox" name="myCheckbox" onclick="displayn(' + index + ')"></td>';
+                    html += '<td><button class="enroldbutton" onclick="enrolddta(' + index + ')"     style = "width: auto; display: block;" ><img src="/imges/person-add.svg" style=" vertical-align: baseline; "></button><img src="/imges/Component.svg" class="okenrol" style=" vertical-align: baseline;width: 40px; display: none; "></td>';
+
+
+                    html += "</tr>"
+
+                });
+                document.querySelector("#crudTable tbody").innerHTML = html;
+            }
+            else {
+                document.querySelector("#crudTable tbody").innerHTML = "";
+
+
+
+            }
+        }
+
+
+        takingdataRegisterstudent();
+
+
+
+
+
+
+
+
+
+
+
+
+        document.getElementById("Update").style.display = "none";
+        document.querySelector(".secbox").style.display = "none";
+        document.querySelector(".ssecbox").style.display = "none";
+        document.querySelector(".Enroled").style.display = "none";
+        document.querySelector(".Courscumplete").style.display = "none";
+        document.querySelector(".ArchiveData").style.display = "none";
+
+
+
+
+
+        // searching for user id that come to login area
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const userId = urlParams.get("id");
+
+        document.getElementById("userIdDisplay").innerHTML = userId;
+
+        // ENDING of searching
+
+        const make = () => {
+            // Use window.location.href to redirect to the specified URL
+            window.location.href = '/Admin.html';
+        };
+
+        function Registerstudents() {
+           
+
+            
+            document.querySelector(".login").style.display = "none";
+            document.querySelector(".leftbar").style.display = "none";
+            document.querySelector(".ArchiveData").style.display = "none";
+            document.querySelector(".secbox").style.display = "block";
+            document.querySelector(".login").style.display = "none";
+            document.querySelector(".ssecbox").style.display = "none";
+            document.querySelector(".Enroled").style.display = "none";
+            document.querySelector(".secbox").style.display = "block";
+            document.querySelector(".Courscumplete").style.display = "none";
+
+
+            
+
+        }
+
+        function DataAtArcive() {
+
+
+            document.querySelector(".login").style.display = "none";
+            document.querySelector(".leftbar").style.display = "none";
+            document.querySelector(".secbox").style.display = "none";
+            document.querySelector(".login").style.display = "none";
+            document.querySelector(".ssecbox").style.display = "none";
+            document.querySelector(".Enroled").style.display = "none";
+
+            document.querySelector(".Courscumplete").style.display = "none";
+
+            document.querySelector(".ArchiveData").style.display = "block";
+
+
+            let Archives = localStorage.getItem("Archivedata");
+            let Archivesdatas = Archives ? JSON.parse(Archives) : [];
+
+
+
+
+            var html = "";
+            // if ((name !== "" )){ && isChecked==true
+
+            if (Archivesdatas.length !== 0) {
+                Archivesdatas.forEach(function (element, index) {
+
+
+                    html += "<tr>";
+                    html += "<td>" + element.usname + "</td>";
+                    html += "<td>" + element.Dob + "</td>";
+                    html += "<td>" + element.Mobile + "</td>";
+                    html += "<td>" + element.gender + "</td>";
+                    html += "<td>" + element.email + "</td>";
+                    html += "<td>" + element.Username + "</td>";
+                    html += "<td>" + element.Password + "</td>";
+                    html += "<td>" + element.Nationality + "</td>";
+                    html += "<td>" + element.clgname + "</td>";
+                    html += "<td>" + element.admisdata + "</td>";
+
+                    html += '<td><button onclick="deleteDatatem(' + index + ')" class="btn btn-danger" style = "width: auto;" ><img src="/imges/trash3-fill.svg" alt="" srcset="" style=" vertical-align: baseline; "></button></td>';
+                    // html += '<td><input type="checkbox" id="myCheckbox" name="myCheckbox" onclick="displayn(' + index + ')"></td>';
+                    // html += '<td><button onclick="enrolddta(' + index + ')"  class="btn btn-primary" class="enroldbutton"  style = "width: auto;" ><img src="/imges/person-add.svg" style=" vertical-align: baseline; "></button><img src="/imges/Component.svg" class="okenrol"" style=" vertical-align: baseline;width: 40px; display: none; "></td>';
+
+
+                    html += "</tr>"
+
+                });
+                document.querySelector("#ccccrudTable tbody").innerHTML = html;
+            }
+            else {
+                document.querySelector("#ccccrudTable tbody").innerHTML = "";
+
+
+
+            }
+
+
+
+        }
+        function deleteDatatem(index) {
+
+
+
+            let Archives = localStorage.getItem("Archivedata");
+            let Archivesdatas = Archives ? JSON.parse(Archives) : [];
+
+
+
+            Archivesdatas.splice(index, 1);
+            localStorage.setItem("Archivedata", JSON.stringify(Archivesdatas));
+
+
+            DataAtArcive();
+
+        }
+
+
+        function enrolddta(index) {
+
+            // document.getElementsByClassName("okenrol").style.display = "block";
+            document.querySelector(".ssecbox").style.display = "none";
+            document.querySelector(".ArchiveData").style.display = "none";
+
+            // document.getElementsByClassName("enroldbutton").style.display = "none";
+            document.querySelector(".Courscumplete").style.display = "none";
+
+
+            var elements = document.getElementsByClassName("okenrol");
+
+            for (var i = 0; i < elements.length; i++) {
+                elements[index].style.display = "block";
+            }
+
+            var eelements = document.getElementsByClassName("enroldbutton");
+
+            for (var i = 0; i < eelements.length; i++) {
+                eelements[index].style.display = "none";
+            }
+
+
+
+
+
+
+            let exxdata = localStorage.getItem("mydata");
+            let mmyarry = exxdata ? JSON.parse(exxdata) : [];
+
+            let usname = mmyarry[index].usname;
+            let Dob = mmyarry[index].Dob;
+            let Mobile = mmyarry[index].Mobile;
+            let gender = mmyarry[index].gender;
+            let email = mmyarry[index].email;
+            let Username = mmyarry[index].Username;
+            let Password = mmyarry[index].Password;
+            let Nationality = mmyarry[index].Nationality;
+            let clgname = mmyarry[index].clgname;
+            let admisdata = mmyarry[index].admisdata;
+
+
+
+
+            let enrols = localStorage.getItem("enrolddata");
+            let myenrols = enrols ? JSON.parse(enrols) : [];
+
+
+
+            var data = {
+                usname: usname,
+                Dob: Dob,
+                Mobile: Mobile,
+                gender: gender,
+                email: email,
+                Username: Username,
+                Password: Password,
+                Nationality: Nationality,
+                clgname: clgname,
+                admisdata: admisdata
+            };
+
+            getenroldata(data);
+
+
+
+
+
+        }
+
+        function courscumplete(index) {
+            document.querySelector(".ssecbox").style.display = "none";
+            document.querySelector(".ArchiveData").style.display = "none";
+
+            // document.getElementById("okenrol"+index).style.display = "block";
+
+            // document.getElementById("enroldbutton"+index).style.display = "none";
+
+
+            // document.getElementById("okenrol" + index);
+            // document.getElementById("enroldbutton" + index);
+
+
+            // document.querySelector(`#enroldbutton(${index})`).style.display= "none";
+
+            // okenrolElement.style.display = "block";
+            // enroldbuttonElement.style.display = "none";
+
+
+            let enrols = localStorage.getItem("enrolddata");
+            let myenrols = enrols ? JSON.parse(enrols) : [];
+
+            let usname = myenrols[index].usname;
+            let Dob = myenrols[index].Dob;
+            let Mobile = myenrols[index].Mobile;
+            let gender = myenrols[index].gender;
+            let email = myenrols[index].email;
+            let Username = myenrols[index].Username;
+            let Password = myenrols[index].Password;
+            let Nationality = myenrols[index].Nationality;
+            let clgname = myenrols[index].clgname;
+            let admisdata = myenrols[index].admisdata;
+
+
+
+
+            let courscum = localStorage.getItem("coursecumplete");
+            let courscumpl = courscum ? JSON.parse(courscum) : [];
+
+
+
+            var data = {
+                usname: usname,
+                Dob: Dob,
+                Mobile: Mobile,
+                gender: gender,
+                email: email,
+                Username: Username,
+                Password: Password,
+                Nationality: Nationality,
+                clgname: clgname,
+                admisdata: admisdata
+            };
+
+            getcoursdata(data);
+
+
+            var eellements = document.getElementsByClassName("forenrol");
+
+            for (var i = 0; i < eellements.length; i++) {
+                eellements[index].style.display = "none";
+            }
+
+
+
+
+
+        }
+
+        function getcoursdata(formdata) {
+
+
+
+
+            let courscum = localStorage.getItem("coursecumplete");
+            let courscumpl = courscum ? JSON.parse(courscum) : [];
+
+
+
+            courscumpl.push(formdata);
+
+            localStorage.setItem("coursecumplete", JSON.stringify(courscumpl));
+
+        }
+
+
+        function getenroldata(formdata) {
+
+
+
+
+
+            let enrols = localStorage.getItem("enrolddata");
+            let myenrols = enrols ? JSON.parse(enrols) : [];
+
+            myenrols.push(formdata);
+
+            localStorage.setItem("enrolddata", JSON.stringify(myenrols));
+
+        }
+
+
+        function submit() {
+            let usname = document.getElementById("name").value;
+            let Dob = document.getElementById("Dob").value;
+            let Mobile = document.getElementById("Mobile").value;
+            let gender = document.getElementById("gender").value;
+            let email = document.getElementById("email").value;
+            let Username = document.getElementById("Username").value;
+            let Password = document.getElementById("Password").value;
+            let Nationality = document.getElementById("Nationality").value;
+            let clgname = document.getElementById("clgname").value;
+            let admisdata = document.getElementById("admisdata").value;
+
+            var genderGroup = document.getElementsByName("gender");
+
+            // Initialize a variable to store the selected value
+            var selectedGender;
+
+            // Loop through the radio buttons to find the selected one
+            for (var i = 0; i < genderGroup.length; i++) {
+                if (genderGroup[i].checked) {
+                    // Set the selected value
+                    selectedGender = genderGroup[i].value;
+
+                    break; // Exit the loop since we found the selected value
+                }
+
+            }
+            console.log("Selected Gender:", selectedGender);
+
+            if ((usname != "") & (Dob != "") & (Mobile != "") & (email != "") & (Username != "") & (Password != "") & (Nationality != "") & (clgname != "") & (admisdata != "")) {
+                var data = {
+                    usname: usname,
+                    Dob: Dob,
+                    Mobile: Mobile,
+                    gender: selectedGender,
+                    email: email,
+                    Username: Username,
+                    Password: Password,
+                    Nationality: Nationality,
+                    clgname: clgname,
+                    admisdata: admisdata
+                };
+
+
+
+                getdata(data);
+
+            }
+            else {
+                window.alert("Enter value")
+
+                name = document.getElementById("name").value = "";
+                Dob = document.getElementById("Dob").value = "";
+                Mobile = document.getElementById("Mobile").value = "";
+                gender = document.getElementById("gender").value = "";
+                email = document.getElementById("email").value = "";
+                Username = document.getElementById("Username").value = "";
+                Password = document.getElementById("Password").value = "";
+                Nationality = document.getElementById("Nationality").value = "";
+                clgname = document.getElementById("clgname").value = "";
+                admisdata = document.getElementById("admisdata").value = "";
+
+            }
+
+            // name = document.getElementById("name").value = "";
+            // age = document.getElementById("age").value = "";
+
+
+            name = document.getElementById("name").value = "";
+            Dob = document.getElementById("Dob").value = "";
+            Mobile = document.getElementById("Mobile").value = "";
+            gender = document.getElementById("gender").value = "";
+            email = document.getElementById("email").value = "";
+            Username = document.getElementById("Username").value = "";
+            Password = document.getElementById("Password").value = "";
+            Nationality = document.getElementById("Nationality").value = "";
+            clgname = document.getElementById("clgname").value = "";
+            admisdata = document.getElementById("admisdata").value = "";
+
+
+        }
+
+        function datashow() {
+            document.querySelector(".login").style.display = "none";
+            document.querySelector(".ssecbox").style.display = "none";
+            document.querySelector(".secbox").style.display = "block";
+            document.querySelector(".ArchiveData").style.display = "none";
+            document.querySelector(".Courscumplete").style.display = "none";
+
+            // Retrieve data from localStorage
+            let exxdata = localStorage.getItem("mydata");
+            let mmmmyarry = exxdata ? JSON.parse(exxdata) : [];
+
+            let usname = document.getElementById("name").value;
+            let Dob = document.getElementById("Dob").value;
+            let Mobile = document.getElementById("Mobile").value;
+            let gender = document.getElementById("gender").value;
+            let email = document.getElementById("email").value;
+            let Username = document.getElementById("Username").value;
+            let Password = document.getElementById("Password").value;
+            let Nationality = document.getElementById("Nationality").value;
+            let clgname = document.getElementById("clgname").value;
+            let admisdata = document.getElementById("admisdata").value;
+
+            var genderGroup = document.getElementsByName("gender");
+
+
+
+
+
+
+            // Log the data (you can customize this based on your requirements)
+
+            var html = "";
+            // if ((name !== "" )){
+
+            if (mmmmyarry.length !== 0) {
+                mmmmyarry.forEach(function (element, index) {
+
+
+
+                    html += "<tr>";
+                    html += "<td>" + element.usname + "</td>";
+                    html += "<td>" + element.Dob + "</td>";
+                    html += "<td>" + element.Mobile + "</td>";
+                    html += "<td>" + element.gender + "</td>";
+                    html += "<td>" + element.email + "</td>";
+                    html += "<td>" + element.Username + "</td>";
+                    html += "<td>" + element.Password + "</td>";
+                    html += "<td>" + element.Nationality + "</td>";
+                    html += "<td>" + element.clgname + "</td>";
+                    html += "<td>" + element.admisdata + "</td>";
+
+                    html += '<td><button onclick="deleteData(' + index + ')" class="btn btn-danger" style = "width: auto;" ><img src="/imges/trash3-fill.svg" alt="" srcset="" style=" vertical-align: baseline; "></button><button onclick="updateDate(' + index + ')" class="btn btn-warning m-2" style = "width: auto;"  ><img src="/imges/pen.svg" alt="" srcset="" style=" vertical-align: baseline; " ></button></td>';
+                    // html += '<td><input type="checkbox" id="myCheckbox" name="myCheckbox" onclick="displayn(' + index + ')"></td>';
+                    html += "</tr>"
+
+                });
+                document.querySelector("#crudTable tbody").innerHTML = html;
+            }
+            else {
+                document.querySelector("#crudTable tbody").innerHTML = "";
+
+
+
+            }
+            // }
+            // else{
+            //     window.alert("Enter value")
+            // }
+
+            // document.querySelector(".secbox").innerHTML = html;
+
+
+
+            // mmmmyarry.forEach(item => {
+
+            //     document.querySelector(".secbox").innerHTML += (`Name : ${item.name}, Age: ${item.age}`) + "<br>" + `<button onclick="updateDate(' + index + ')" class="btn btn-warning m-2">Edit</button>`;
+
+            //     console.log(`Name: ${item.name}, Age: ${item.age}`);
+            // });
+
+        }
+        function displayn(index) {
+
+
+
+
+        }
+
+        function deleteData(index) {
+            let exxdata = localStorage.getItem("mydata");
+            let mmmyarry = exxdata ? JSON.parse(exxdata) : [];
+
+
+            let usname = mmmyarry[index].usname;
+            let Dob = mmmyarry[index].Dob;
+            let Mobile = mmmyarry[index].Mobile;
+            let gender = mmmyarry[index].gender;
+            let email = mmmyarry[index].email;
+            let Username = mmmyarry[index].Username;
+            let Password = mmmyarry[index].Password;
+            let Nationality = mmmyarry[index].Nationality;
+            let clgname = mmmyarry[index].clgname;
+            let admisdata = mmmyarry[index].admisdata;
+
+
+            let Archives = localStorage.getItem("Archivedata");
+            let Archivesdatas = Archives ? JSON.parse(Archives) : [];
+
+
+            var data = {
+                usname: usname,
+                Dob: Dob,
+                Mobile: Mobile,
+                gender: gender,
+                email: email,
+                Username: Username,
+                Password: Password,
+                Nationality: Nationality,
+                clgname: clgname,
+                admisdata: admisdata
+            };
+
+            Archivdata(data);
+
+
+
+
+            mmmyarry.splice(index, 1);
+            localStorage.setItem("mydata", JSON.stringify(mmmyarry));
+
+
+            // datashow();
+            Registerstudents();
+
+
+
+
+
+
+        }
+
+
+        function Archivdata(formdata) {
+
+
+
+
+
+            let Archives = localStorage.getItem("Archivedata");
+            let Archivesdatas = Archives ? JSON.parse(Archives) : [];
+
+            Archivesdatas.push(formdata);
+
+            localStorage.setItem("Archivedata", JSON.stringify(Archivesdatas));
+
+        }
+
+
+
+        function updateDate(index) {
+            document.getElementById("sub").style.display = "none";
+            document.getElementById("Show").style.display = "none";
+            document.querySelector(".ArchiveData").style.display = "none";
+
+
+
+            document.querySelector(".login").style.display = "block";
+            document.querySelector(".secbox").style.display = "none";
+            document.querySelector(".ssecbox").style.display = "none";
+
+
+
+            document.getElementById("Update").style.display = "block";
+            let exxdata = localStorage.getItem("mydata");
+            let mmyarry = exxdata ? JSON.parse(exxdata) : [];
+
+            document.getElementById("name").value = mmyarry[index].usname;
+            document.getElementById("Dob").value = mmyarry[index].Dob;
+            document.getElementById("Mobile").value = mmyarry[index].Mobile;
+            document.getElementById("gender").value = mmyarry[index].gender;
+            document.getElementById("email").value = mmyarry[index].email;
+            document.getElementById("Username").value = mmyarry[index].Username;
+            document.getElementById("Password").value = mmyarry[index].Password;
+            document.getElementById("Nationality").value = mmyarry[index].Nationality;
+            document.getElementById("clgname").value = mmyarry[index].clgname;
+            document.getElementById("admisdata").value = mmyarry[index].admisdata;
+
+            // document.getElementsByName("gender") = mmyarry[index].genderGroup;
+
+
+
+            // document.querySelector(".login").innerHTML += '<button class="btn btn-primary" id="Update">Update</button>';
+
+
+
+            document.querySelector("#Update").onclick = function () {
+
+
+                document.getElementById("sub").style.display = "block";
+                document.getElementById("Show").style.display = "block";
+
+
+
+                mmyarry[index].usname = document.getElementById("name").value
+                mmyarry[index].Dob = document.getElementById("Dob").value;
+                mmyarry[index].Mobile = document.getElementById("Mobile").value;
+                mmyarry[index].gender = document.getElementById("gender").value;
+                mmyarry[index].email = document.getElementById("email").value;
+                mmyarry[index].Username = document.getElementById("Username").value;
+                mmyarry[index].Password = document.getElementById("Password").value;
+                mmyarry[index].Nationality = document.getElementById("Nationality").value;
+                mmyarry[index].clgname = document.getElementById("clgname").value;
+                mmyarry[index].admisdata = document.getElementById("admisdata").value;
+
+
+
+                let usname = document.getElementById("name").value = "";
+                let Dob = document.getElementById("Dob").value = "";
+                let Mobile = document.getElementById("Mobile").value = "";
+                let gender = document.getElementById("gender").value = "";
+                let email = document.getElementById("email").value = "";
+                let Username = document.getElementById("Username").value = "";
+                let Password = document.getElementById("Password").value = "";
+                let Nationality = document.getElementById("Nationality").value = "";
+                let clgname = document.getElementById("clgname").value = "";
+                let admisdata = document.getElementById("admisdata").value = "";
+
+
+
+
+                // mmyarry[index].genderGroup = document.getElementsByName("gender").value;
+
+
+                localStorage.setItem("mydata", JSON.stringify(mmyarry));
+                datashow();
+                document.getElementById("Update").style.display = "none";
+
+                Registerstudents()
+            }
+
+        }
+
+        function show() {
+            document.querySelector(".secbox").style.display = "none";
+            document.querySelector(".ssecbox").style.display = "none";
+            let dot = document.getElementsByClassName(".leftbar");
+            document.querySelector(".leftbar ").style.display = "block";
+            document.querySelector(".slider ").style.display = "none";
+            document.querySelector(".login").style.display = "none";
+            document.querySelector(".Enroled").style.display = "none";
+            document.querySelector(".Courscumplete").style.display = "none";
+            document.querySelector(".ArchiveData").style.display = "none";
+
+        }
+
+        function remov() {
+
+            document.querySelector(".leftbar ").style.display = "none";
+            document.querySelector(".slider ").style.display = "flex";
+            document.querySelector(".Enroled").style.display = "none";
+            document.querySelector(".ArchiveData").style.display = "none";
+            document.querySelector(".ssecbox").style.display = "none";
+        }
+
+
+
+        function NewRegistration() {
+            document.querySelector(".leftbar").style.display = "none";
+            document.querySelector(".slider").style.display = "none";
+            document.querySelector(".Enroled").style.display = "none";
+            document.querySelector(".ssecbox").style.display = "none";
+            document.querySelector(".ArchiveData").style.display = "none";
+            document.querySelector(".login").style.display = "block";
+            document.querySelector(".Courscumplete").style.display = "none";
+
+        }
+
+        function enrol() {
+
+            document.querySelector(".leftbar").style.display = "none";
+            document.querySelector(".slider").style.display = "none";
+            document.querySelector(".login").style.display = "none";
+            document.querySelector(".Enroled").style.display = "block";
+            document.querySelector(".Courscumplete").style.display = "none";
+            document.querySelector(".ssecbox").style.display = "none";
+
+
+
+
+            // let exxdata = localStorage.getItem("mydata");
+            // let mmmmyarry = exxdata ? JSON.parse(exxdata) : [];
+
+            let enrols = localStorage.getItem("enrolddata");
+            let myenrols = enrols ? JSON.parse(enrols) : [];
+
+
+            let usname = document.getElementById("name").value;
+            let Dob = document.getElementById("Dob").value;
+            let Mobile = document.getElementById("Mobile").value;
+            let gender = document.getElementById("gender").value;
+            let email = document.getElementById("email").value;
+            let Username = document.getElementById("Username").value;
+            let Password = document.getElementById("Password").value;
+            let Nationality = document.getElementById("Nationality").value;
+            let clgname = document.getElementById("clgname").value;
+            let admisdata = document.getElementById("admisdata").value;
+
+
+            var genderGroup = document.getElementsByName("gender");
+            var genderGroupp = document.getElementsByClassName("gender").value;
+
+
+            // Log the data (you can customize this based on your requirements)
+
+            var html = "";
+            // if ((name !== "" )){z    
+
+            if (myenrols.length !== 0) {
+                myenrols.forEach(function (element, index) {
+
+                    // var index = element.index;
+
+
+                    html += "<tr>";
+                    html += "<td>" + element.usname + " (" + index + ")" + "</td>";
+                    html += "<td>" + element.Dob + "</td>";
+                    html += "<td>" + element.Mobile + "</td>";
+                    html += "<td>" + element.gender + "</td>";
+                    html += "<td>" + element.email + "</td>";
+                    html += "<td>" + element.Username + "</td>";
+                    html += "<td>" + element.Password + "</td>";
+                    html += "<td>" + element.Nationality + "</td>";
+                    html += "<td>" + element.clgname + "</td>";
+                    html += "<td>" + element.admisdata + "</td>";
+
+                    // html += '<td><button onclick="deleteData(' + index + ')" class="btn btn-danger" style = "width: auto;" ><img src="/imges/trash3-fill.svg" alt="" srcset="" style=" vertical-align: baseline; "></button><button onclick="updateDate(' + index + ')" class="btn btn-warning m-2" style = "width: auto;"  ><img src="/imges/pen.svg" alt="" srcset="" style=" vertical-align: baseline; " ></button></td>';
+                    // // html += '<td><input type="checkbox" id="myCheckbox" name="myCheckbox" onclick="displayn(' + index + ')"></td>';
+                    html += '<td><button onclick="courscumplete(' + index + ')"  class="forenrol"   style = "width: auto;   " ><img src="/imges/person-add.svg" style=" vertical-align: baseline; "><span class="tooltiptext">CLICK FOR COURSE CUMPLETE</span></button><img src="/imges/Component.svg" class="okenrol"(' + index + ')" style=" vertical-align: baseline;width: 40px; display: none; "></td>';
+
+
+                    html += "</tr>"
+
+                });
+                document.querySelector("#ccrudTable tbody").innerHTML = html;
+
+
+
+            }
+            else {
+                document.querySelector("#ccrudTable tbody").innerHTML = "";
+
+
+
+            }
+
+
+
+
+
+
+
+
+        }
+
+
+        function Coursetocumplete() {
+            document.querySelector(".ssecbox").style.display = "none";
+            document.querySelector(".leftbar").style.display = "none";
+            document.querySelector(".ArchiveData").style.display = "none";
+            document.querySelector(".slider").style.display = "none";
+            document.querySelector(".login").style.display = "none";
+            document.querySelector(".Enroled").style.display = "none";
+            document.querySelector(".Courscumplete").style.display = "block";
+
+
+
+
+            // let exxdata = localStorage.getItem("mydata");
+            // let mmmmyarry = exxdata ? JSON.parse(exxdata) : [];
+
+            let enrols = localStorage.getItem("enrolddata");
+            let myenrols = enrols ? JSON.parse(enrols) : [];
+
+
+            let courscum = localStorage.getItem("coursecumplete");
+            let courscumpl = courscum ? JSON.parse(courscum) : [];
+
+
+            let usname = document.getElementById("name").value;
+            let Dob = document.getElementById("Dob").value;
+            let Mobile = document.getElementById("Mobile").value;
+            let gender = document.getElementById("gender").value;
+            let email = document.getElementById("email").value;
+            let Username = document.getElementById("Username").value;
+            let Password = document.getElementById("Password").value;
+            let Nationality = document.getElementById("Nationality").value;
+            let clgname = document.getElementById("clgname").value;
+            let admisdata = document.getElementById("admisdata").value;
+
+
+            var genderGroup = document.getElementsByName("gender");
+            var genderGroupp = document.getElementsByClassName("gender").value;
+
+
+            // Log the data (you can customize this based on your requirements)
+
+            var html = "";
+            // if ((name !== "" )){z    
+
+            if (courscumpl.length !== 0) {
+                courscumpl.forEach(function (element, index) {
+
+                    // var index = element.index;
+
+
+                    html += "<tr>";
+                    html += "<td>" + element.usname + " (" + index + ")" + "</td>";
+                    html += "<td>" + element.Dob + "</td>";
+                    html += "<td>" + element.Mobile + "</td>";
+                    html += "<td>" + element.gender + "</td>";
+                    html += "<td>" + element.email + "</td>";
+                    html += "<td>" + element.Username + "</td>";
+                    html += "<td>" + element.Password + "</td>";
+                    html += "<td>" + element.Nationality + "</td>";
+                    html += "<td>" + element.clgname + "</td>";
+                    html += "<td>" + element.admisdata + "</td>";
+
+                    // html += '<td><button onclick="deleteData(' + index + ')" class="btn btn-danger" style = "width: auto;" ><img src="/imges/trash3-fill.svg" alt="" srcset="" style=" vertical-align: baseline; "></button><button onclick="updateDate(' + index + ')" class="btn btn-warning m-2" style = "width: auto;"  ><img src="/imges/pen.svg" alt="" srcset="" style=" vertical-align: baseline; " ></button></td>';
+                    // // html += '<td><input type="checkbox" id="myCheckbox" name="myCheckbox" onclick="displayn(' + index + ')"></td>';
+                    // html += '<td><button onclick="courscumplete(' + index + ')"  class="btn btn-primary" class="enroldbutton"  style = "width: auto;" ><img src="/imges/person-add.svg" style=" vertical-align: baseline; "></button><img src="/imges/Component.svg" class="okenrol"" style=" vertical-align: baseline;width: 40px; display: none; "></td>';
+
+
+                    html += "</tr>"
+
+                });
+                document.querySelector("#cccrudTable tbody").innerHTML = html;
+
+
+
+            }
+            else {
+                document.querySelector("#cccrudTable tbody").innerHTML = "";
+
+
+
+            }
+
+
+
+
+
+        }
+
+
+
+        function getdata(formdata) {
+
+            document.querySelector(".ssecbox").style.display = "none";
+
+
+
+            let exxdata = localStorage.getItem("mydata");
+
+            let mmmmyarry = exxdata ? JSON.parse(exxdata) : [];
+
+            mmmmyarry.push(formdata);
+
+            localStorage.setItem("mydata", JSON.stringify(mmmmyarry));
+
+        }
+
+
+        function userdata() {
+            document.querySelector(".ssecbox").style.display = "block";
+            document.querySelector(".leftbar").style.display = "none";
+
+            // Retrieve data from localStorage
+            let exdata = localStorage.getItem("userIdPassworda");
+            let myarry = exdata ? JSON.parse(exdata) : [];
+
+
+
+            var html = "";
+
+
+            if (myarry.length !== 0) {
+                myarry.forEach(function (element, index) {
+
+                    html += "<tr>";
+                    html += "<td>" + element.name + "</td>";
+                    html += "<td>" + element.age + "</td>";
+                    html += "</tr>"
+
+                });
+                document.querySelector("#ccccrudTtable tbody").innerHTML = html;
+            }
+            else {
+                document.querySelector("#ccccrudTtable tbody").innerHTML = "";
+
+
+
+            }
+            // }
+            // else{
+            //     window.alert("Enter value")
+            // }
+
+            // document.querySelector(".secbox").innerHTML = html;
+
+
+
+            // myarry.forEach(item => {
+
+            //     document.querySelector(".secbox").innerHTML += (`Name : ${item.name}, Age: ${item.age}`) + "<br>" + `<button onclick="updateDate(' + index + ')" class="btn btn-warning m-2">Edit</button>`;
+
+            //     console.log(`Name: ${item.name}, Age: ${item.age}`);
+            // });
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

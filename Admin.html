@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #f8f8f8;
+      background-image: url(imges/Group\ 108.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    }
+
+    #scrolling-container {
+
+        backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.2);
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 800px;
+      height: 60%;
+      padding: 30px;
+      /* background-color: #ffffff; */
+      border: 1px solid #ddd;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      white-space: normal;
+      border-radius: 10px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    #scrolling-content {
+      display: inline-block;
+      animation: scrollText 10s linear infinite;
+    }
+
+    h1 {
+      position: absolute;
+      top: 20px; /* Adjust the top position as needed */
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: #ffffff;
+      font-size: 2em;
+      margin-bottom: 20px;
+      z-index: 1; /* Make sure h1 appears above the scrolling content */
+    }
+
+    p {
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    @keyframes scrollText {
+      0% {
+        transform: translateY(0%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .back{
+      position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 162px;
+    border-radius: 5px;
+    height: 54px;
+    font-weight: 500;
+    background: #1E1152;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+
+ .back:hover {
+
+    background: #ffffff;
+    color: #1E1152;
+    transition: .2s linear;
+
+}
+  </style>
+</head>
+<body>
+  <h1>About Us</h1>
+  <div id="scrolling-container">
+    <div id="scrolling-content">
+      <p>College is a period of time in a person's life where they will learn and grow in many ways. It is a time to explore new interests, make new friends, and prepare for the future. There are many different colleges to choose from, so it is important to do your research and find the one that is right for you.<br><br>
+        When choosing a college, there are many factors to consider, such as the size of the school, the location, the cost, and the academic programs offered. It is also important to visit the colleges you are interested in and talk to current students and faculty.<br><br>
+        Once you have chosen a college, you will need to apply for admission. The application process usually includes submitting transcripts, test scores, and an essay. It is important to start the application process early, as it can be time-consuming.<br><br>
+        If you are accepted to college, you will need to make a decision about whether or not to attend. There are many factors to consider when making this decision, such as the cost of attendance, the financial aid available, and your career goals.<br><br>
+        If you decide to attend college, there are many things you can do to prepare. First, make sure you have all of the necessary supplies, such as textbooks, notebooks, and a laptop. Second, get organized and create a study schedule. Third, get involved in extracurricular activities. And finally, relax and enjoy your time in college!<br><br>
+        College is a time of great change and growth. It is a time to learn new things, meet new people, and make lifelong memories. So make the most of your college experience and enjoy every minute of it!</p>
+   
+      </div>
+      
+   
+  </div>
+  <button class="back" onclick="make()">BACK</button>
+
+  <script>
+    const make = () => {
+            // Use window.location.href to redirect to the specified URL
+            window.location.href = '/Dashbord.html';
+        };
+  </script>
+</body>
+</html>

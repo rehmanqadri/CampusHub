@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Buttons</title>
+    <style>
+        /* Optional styles for buttons */
+        .toggle-button {
+            padding: 5px 10px;
+            background-color: lightblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- First Table -->
+<table>
+    <tr>
+        <td>Table 1 Row 1</td>
+        <td><button class="toggle-button" onclick="enrolddta(0)">Toggle Button</button></td>
+    </tr>
+</table>
+
+<!-- Second Table -->
+<table>
+    <tr>
+        <td>Table 2 Row 1</td>
+        <td><button class="toggle-button" onclick="enrolddta(1)">Toggle Button</button></td>
+    </tr>
+</table>
+
+<script>
+    function enrolddta(index) {
+    // Your existing function implementation
+    // ...
+
+    // Toggle the display property only for the clicked button
+    var clickedButton = document.querySelectorAll('.toggle-button')[index];
+    clickedButton.style.display = (clickedButton.style.display === 'none' || clickedButton.style.display === '') ? 'block' : 'none';
+}
+
+</script>
+
+</body>
+</html>

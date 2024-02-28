@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <!-- <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .login {
+            /* max-width: 400px; */
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .login label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        .login input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .login button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+
+
+        .login button:hover {
+            background-color: #45a049;
+        }
+
+        .secbox {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            /* max-width: 400px; */
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           border-radius: 10px;
+           overflow: hidden;
+           width: 450px;
+        }
+
+        .secbox p {
+            margin: 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .meto {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        body {
+            background-image: url('/f2.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .login {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           border-radius: 35px;
+           overflow: hidden;
+           width: 450px;
+        }
+
+        .secbox {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .box {
+           
+       }
+        
+    </style> -->
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+    
+        .login {
+            width: 100%;
+            max-width: 400px; /* Adjusted max-width for better responsiveness */
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 35px;
+            overflow: hidden;
+            margin-bottom: 20px; /* Added margin for separation on smaller screens */
+        }
+    
+        .login label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: #ffffff;
+        }
+    
+        .login input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    
+        .login button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    
+        .login button:hover {
+            background-color: #45a049;
+        }
+    
+        .secbox {
+            width: 100%;
+            max-width: 400px; /* Adjusted max-width for better responsiveness */
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 35px;
+            overflow: hidden;
+        }
+    
+        .secbox p {
+            margin: 0;
+            font-size: 14px;
+            color: #333;
+        }
+    
+        .meto {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+    
+        body {
+            background-image: url('/f2comres.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+    
+        .login {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+    
+        .secbox {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+    
+        .box {
+            /* You can add responsive styles to .box if needed */
+        }
+    </style>
+    
+</head>
+
+<body><div class="box">
+    <div class="login">
+        <h2>Login Form</h2>
+        <label for="name">Enter your User ID:</label>
+        <input type="text" id="name" placeholder="Enter Your  User ID">
+        <label for="age">Enter your Password:</label>
+        <input type="text" id="age" placeholder="Enter Your Password">
+        <button id="sub" onclick="submit()">Submit</button>
+        <button id="Show" onclick="datashow()">Show Data</button>
+        <button id="cle" onclick="ClearData()">Clead data</button>
+
+
+        <div class="meto">
+            <h4>already have account just sign</h4>
+            <button id="sig" onclick="signin()">Sign In</button>
+            <button id="Update">Update</button>
+        </div>
+
+        <!-- <button onclick="otp()">Genrat otp</button> -->
+    </div>
+
+    <div class="secbox">
+
+        <table class="table table-bordered" id="crudTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Password</th>
+
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+</div>
+
+    <script>
+
+
+
+        document.getElementById("Update").style.display = "none";
+
+        function getdata(formdata) {
+
+
+
+            let exdata = localStorage.getItem("userIdPassworda");
+
+            let myarry = exdata ? JSON.parse(exdata) : [];
+
+            myarry.push(formdata);
+
+            localStorage.setItem("userIdPassworda", JSON.stringify(myarry));
+
+
+
+        }
+
+        function submit() {
+            name = document.getElementById("name").value;
+            age = document.getElementById("age").value;
+
+            if ((name !== "")) {
+                var data = {
+                    name: name,
+                    age: age
+                };
+
+                getdata(data);
+
+            }
+            else {
+                window.alert("Enter value")
+            }
+
+            name = document.getElementById("name").value = "";
+            age = document.getElementById("age").value = "";
+
+
+        }
+
+        function datashow() {
+
+            // Retrieve data from localStorage
+            let exdata = localStorage.getItem("userIdPassworda");
+            let myarry = exdata ? JSON.parse(exdata) : [];
+
+            name = document.getElementById("name").value;
+            age = document.getElementById("age").value;
+
+            // Log the data (you can customize this based on your requirements)
+
+            var html = "";
+            // if ((name !== "" )){
+
+            if (myarry.length !== 0) {
+                myarry.forEach(function (element, index) {
+
+                    html += "<tr>";
+                    html += "<td>" + element.name + "</td>";
+                    html += "<td>" + element.age + "</td>";
+                    html += '<td><button onclick="deleteData(' + index + ')" class="btn btn-danger">Delete</button><button onclick="updateDate(' + index + ')" class="btn btn-warning m-2">Edit</button></td>';
+                    html += "</tr>"
+
+                });
+                document.querySelector("#crudTable tbody").innerHTML = html;
+            }
+            else {
+                document.querySelector("#crudTable tbody").innerHTML = "";
+
+
+
+            }
+            // }
+            // else{
+            //     window.alert("Enter value")
+            // }
+
+            // document.querySelector(".secbox").innerHTML = html;
+
+
+
+            // myarry.forEach(item => {
+
+            //     document.querySelector(".secbox").innerHTML += (`Name : ${item.name}, Age: ${item.age}`) + "<br>" + `<button onclick="updateDate(' + index + ')" class="btn btn-warning m-2">Edit</button>`;
+
+            //     console.log(`Name: ${item.name}, Age: ${item.age}`);
+            // });
+
+        }
+
+
+        function ClearData() {
+            localStorage.clear();
+            document.querySelector("#crudTable tbody").innerHTML = "";
+
+        }
+
+        function signin() {
+            window.location.href = "/loginform.html";
+        }
+
+
+        function deleteData(index) {
+            let exdata = localStorage.getItem("userIdPassworda");
+            let myarry = exdata ? JSON.parse(exdata) : [];
+
+
+
+            myarry.splice(index, 1);
+            localStorage.setItem("userIdPassworda", JSON.stringify(myarry));
+
+
+            datashow();
+
+
+
+        }
+
+
+        function updateDate(index) {
+
+            document.getElementById("sub").style.visibility = "hidden";
+                document.getElementById("Show").style.visibility = "hidden";
+                document.getElementById("cle").style.visibility = "hidden";
+                document.getElementById("sig").style.visibility = "hidden";
+
+
+            document.getElementById("Update").style.display = "block";
+            let exdata = localStorage.getItem("userIdPassworda");
+            let myarry = exdata ? JSON.parse(exdata) : [];
+
+
+            document.getElementById("name").value = myarry[index].name;
+            document.getElementById("age").value = myarry[index].age;
+
+            // document.querySelector(".login").innerHTML += '<button class="btn btn-primary" id="Update">Update</button>';
+
+
+
+            document.querySelector("#Update").onclick = function () {
+                document.getElementById("sub").style.visibility = "visible";
+                document.getElementById("Show").style.visibility = "visible";
+                document.getElementById("cle").style.visibility = "visible";
+                document.getElementById("sig").style.visibility = "visible";
+                myarry[index].name = document.getElementById("name").value;
+                myarry[index].age = document.getElementById("age").value;
+
+                localStorage.setItem("userIdPassworda", JSON.stringify(myarry));
+                datashow();
+                document.getElementById("Update").style.display = "none";
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
